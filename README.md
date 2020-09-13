@@ -23,7 +23,6 @@ export default function App() {
   const [userData, setUserData] = useState(undefined);
 
   const loginSuccess = (userData) => {
-    console.log('User Data: ', userData);
     setUserData(userData)
   }
 
