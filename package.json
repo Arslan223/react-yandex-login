@@ -1,6 +1,6 @@
 {
   "name": "react-yandex-login",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Yandex Sign-in/Log-in Component for React",
   "author": "DonTomato",
   "license": "MIT",
@@ -49,5 +49,13 @@
   },
   "files": [
     "dist"
+  ],
+  "keywords": [
+    "react",
+    "reactjs",
+    "yandex",
+    "yandex-login",
+    "auth",
+    "yandex-auth"
   ]
 }
