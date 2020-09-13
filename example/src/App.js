@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 
 import { YandexLogin, YandexLogout } from 'react-yandex-login';
 
-const clientID = '7e0e26558be049c09a2a55eb9563b14a';
+const clientID = '7e0e26558be049c09a2a55eb9563b14b';
 
-export default function App(props) {
+export default function App() {
   const [userData, setUserData] = useState(undefined);
 
   const loginSuccess = (userData) => {
@@ -19,7 +19,9 @@ export default function App(props) {
   return (
     <div>
       {!userData && 
-        <YandexLogin clientID={clientID} onSuccess={loginSuccess} />
+        <YandexLogin clientID={clientID} onSuccess={loginSuccess}>
+          <button>Yandex Login</button>
+        </YandexLogin>
       }
       {userData &&
         <div>

@@ -1,9 +1,6 @@
 import React, { useEffect } from 'react';
 import YandexHiddenFrame from './YandexHiddenFrame';
 // import logo from './yandex_login.png';
-// import './YandexLogin.scss';
-
-// const clientID = '7e0e26558be049c09a2a55eb9563b14a';
 
 function checkAccessKey() {
   const parts = window.location.href.split('#')
@@ -87,7 +84,7 @@ export default function YandexLogin(props) {
 
   return (
     <div>
-      <button onClick={onClick}>Yandex Login</button>
+      { React.cloneElement( props.children, { onClick: onClick } ) }
       {/* <img src={logo} alt="yandex" onClick={onClick} className="yandex-login-button" /> */}
       {frameRedirectTo && <YandexHiddenFrame redirectTo={frameRedirectTo} />}
     </div>
