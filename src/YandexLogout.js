@@ -7,6 +7,8 @@ export default function YandexLogout(props) {
   };
 
   return (
-    <button onClick={onClick}>Yandex Logout</button>
+    <div>
+        { React.cloneElement( props.children, { onClick: onClick } ) }
+    </div>
   );
 }

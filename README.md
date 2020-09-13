@@ -40,7 +40,9 @@ export default function App() {
       }
       {userData &&
         <div>
-          <YandexLogout onSuccess={logoutSuccess} />
+          <YandexLogout onSuccess={logoutSuccess}>
+            <button>Yandex Logout</button>
+          </YandexLogout>
           <ul>
             <li>access_token: {userData.access_token}</li>
             <li>expires_in: {userData.expires_in}</li>

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 import { YandexLogin, YandexLogout } from 'react-yandex-login';
 
-const clientID = '7e0e26558be049c09a2a55eb9563b14b';
+const clientID = '7e0e26558be049c09a2a55eb9563b14a';
 
 export default function App() {
   const [userData, setUserData] = useState(undefined);
@@ -25,7 +25,9 @@ export default function App() {
       }
       {userData &&
         <div>
-          <YandexLogout onSuccess={logoutSuccess} />
+          <YandexLogout onSuccess={logoutSuccess}>
+            <button>Yandex Logout</button>
+          </YandexLogout>
           <ul>
             <li>access_token: {userData.access_token}</li>
             <li>expires_in: {userData.expires_in}</li>
