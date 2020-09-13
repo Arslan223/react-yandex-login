@@ -2,6 +2,8 @@
 
 > A Yandex Sign-in/Log-in Component for React
 
+**It's in development now**
+
 [![NPM](https://img.shields.io/npm/v/react-yandex-login.svg)](https://www.npmjs.com/package/react-yandex-login) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Install
