@@ -17,7 +17,7 @@ import React, { useState } from 'react'
 
 import { YandexLogin, YandexLogout } from 'react-yandex-login';
 
-const clientID = '<<clientID or your Yandex application>>';
+const clientID = '<<clientID of your Yandex application>>';
 
 export default function App() {
   const [userData, setUserData] = useState(undefined);
