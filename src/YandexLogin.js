@@ -18,6 +18,7 @@ function checkAccessKey() {
 
 function getYandexAuthUrl(clientID, redirectUrl) {
   let requestUrl = 'https://oauth.yandex.ru/authorize?response_type=token&client_id=' + clientID;
+  requestUrl += '&force_confirm=yes'
   requestUrl += '&redirect_uri=' + encodeURIComponent(redirectUrl);
   requestUrl += '&display=popup';
   return requestUrl;
@@ -65,20 +66,20 @@ export default function YandexLogin(props) {
         source: 'yandex-login',
         payload: aki
       }, window.location.origin);
-      
+
       window.close();
     }
   });
 
-  
+
 
   if (!aki && !receiver) {
     const autoLoginDIsabled = sessionStorage.getItem('yandexAutoLoginDisabled');
 
-    frameRedirectTo = autoLoginDIsabled !== 'true' 
+    frameRedirectTo = autoLoginDIsabled !== 'true'
       ? getYandexAuthUrl(props.clientID, getCurrentUrl())
       : null;
-    
+
     window.addEventListener('message', handleMessageFromPopup, { once: false });
   }
 
